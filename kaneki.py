@@ -34,31 +34,11 @@ async def start(bot, message):
         parse_mode="html"
     )
     await message.reply_text(
-        text="**Hi {}!**\n".format(message.chat.first_name)+C.START,
+        text="**Hallo {}!**\n".format(message.chat.first_name)\n╟᪣ ID: <code>{}</code>\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>+C.START,
         reply_markup=InlineKeyboardMarkup([
             [ InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{C.SUPPORT_GROUP}"), InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"{C.UPDATE_CHANNEL}")]
         ])
     )
-    
-#@bot.on_message(filters.command('help') & filters.private)
-#async def help(bot, message):
-#    await message.reply_text(
-#        text=C.HELP,
-#        reply_markup=InlineKeyboardMarkup([
-#            [ InlineKeyboardButton(text="🛠SUPPORT🛠", url=f"{C.SUPPORT_GROUP}"), InlineKeyboardButton(text="📮UPDATES📮", url=f"{C.UPDATE_CHANNEL}")]
-#        ])
-#    )
-
-
-#@bot.on_message(filters.command('donate') & filters.private)
-#async def donate(bot, message):
-#    await message.reply_text(
- #       text=C.DONATE + "If You Liked This Bot You Can Also Donate Creator",
- #       reply_markup=InlineKeyboardMarkup([
- #           [ InlineKeyboardButton(text="DONATE", url=f"{donate_link}")]
-#        ])
-#    )
-
 
 @bot.on_message(filters.private & filters.text)
 async def pm_text(bot, message):
