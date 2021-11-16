@@ -27,7 +27,7 @@ IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
 IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 
 @bot.on_message(filters.command('start') & filters.private)
-async def start(bot, msg : message):
+async def start(bot, message):
     await bot.send_message(
         chat_id=owner_id,
         text = "<b>╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'></a>\n╟᪣ Username : https://t.me/{message.chat.username}<>╟᪣ DC ID: <code>{}</code></b>",
