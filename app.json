@@ -1,0 +1,42 @@
+{
+  "name": "Kaneki",
+  "description": "Simple bot to receive feedback just like livebot",
+  "keywords": [
+    "telegram",
+    "livegram",
+    "kontak",
+    "bot"
+  ],
+  "success_url": "https://telegram.dog//",
+  "website": "https://github.com/newkanekibot/livebot",
+  "repository": "https://github.com/newkanekibot/livebot",
+  "env": {
+    "OWNER_ID": {
+      "description": "Your ID Or Who need is going to handle this bot",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token, as a string.",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
