@@ -34,7 +34,7 @@ async def start(bot, message):
           parse_mode="html"
     )
     await message.reply_text(
-        text= "(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id)+C.START,
+        text= format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id)+C.START,
         reply_markup=InlineKeyboardMarkup([
             [ InlineKeyboardButton(text= f"<b> href='tg://user?id={OWNER_ID}")]
         ])
