@@ -20,7 +20,7 @@ bot = Client('Feedback bot',
 
 owner_id=C.OWNER_ID
 
-LOG_TEXT = "╟᪣ ID: <code>{}</code>\n\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>\n\n\n"
+LOG_TEXT = "╟᪣ ID: <code>{}</code>\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>\n\n╟᪣ "
 
 IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}"
 
