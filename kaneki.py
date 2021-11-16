@@ -33,12 +33,7 @@ async def start(bot, message):
         text=LOG_TEXT.format(chat.id, chat.first_name,chat.last_name,chat.username,chat.dc_id),
           parse_mode="html"
     )
-   await message.reply_text(
-        text=LOG_TEXT.format(.chat.id,chat.first_name,chat.last_name,chat.username,chat.dc_id)+C.START,
-        reply_markup=InlineKeyboardMarkup([
-            [ InlineKeyboardButton(text= f"<b> href='tg://user?id={OWNER_ID}")]
-        ])
-    ) 
+  
 
 #@bot.on_message(filters.command('help') & filters.private)
 #async def help(bot, message):
