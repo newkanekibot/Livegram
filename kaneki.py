@@ -20,7 +20,7 @@ bot = Client('Feedback bot',
 
 owner_id=C.OWNER_ID
 
-LOG_TEXT = "╟᪣ ID: <code>{}</code>\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>\n\n╟᪣ "
+LOG_TEXT = "\n\n╟᪣ ID: <code>{}</code>\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>\n╟᪣ "
 
 IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}"
 
@@ -30,7 +30,7 @@ IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 async def start(bot, message):
     await bot.send_message(
         chat_id=owner_id,
-        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.dc_id),
+        #text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.dc_id),
         parse_mode="html"
     )
     await message.reply_text(
