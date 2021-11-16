@@ -20,7 +20,7 @@ bot = Client('Feedback bot',
 
 owner_id=C.OWNER_ID
 
-LOG_TEXT = "╟᪣ ID: <code>{}</code>\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>\n"
+LOG_TEXT = "╟᪣ ID: <code>{}</code>\n\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>\n\n\n"
 
 IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}"
 
@@ -34,7 +34,7 @@ async def start(bot, message):
         parse_mode="html"
     )
     await message.reply_text(
-        text="**Hi {}!**\n".format(message.chat.first_name)+LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.dc_id)+C.START,
+        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.dc_id)+C.START,
         reply_markup=InlineKeyboardMarkup([
             [ InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{C.SUPPORT_GROUP}"), InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"{C.UPDATE_CHANNEL}")]
         ])
