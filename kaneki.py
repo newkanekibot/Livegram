@@ -30,7 +30,11 @@ IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 async def start(bot, message):
     await bot.send_message(
         chat_id=owner_id,
-        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id)+C.START,
+        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id),
+          parse_mode="html"
+    )
+    await message.reply_text(
+        text= "(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id)+C.START,
         reply_markup=InlineKeyboardMarkup([
             [ InlineKeyboardButton(text= f"<b> href='tg://user?id={OWNER_ID}")]
         ])
