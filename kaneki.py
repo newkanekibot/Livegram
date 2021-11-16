@@ -30,7 +30,7 @@ IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 async def start(bot, message):
     await bot.send_message(
         chat_id=owner_id,
-        text = "<b>╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'>{}</a>\n╟᪣ Username : url="https://t.me/{client.username}?start={message.command[1]}">{}</a>╟᪣ DC ID: <code>{}</code></b>",
+        text = "<b>╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'>{}</a>\n╟᪣ Username : url='https://t.me/{client.username}'>{}</a>╟᪣ DC ID: <code>{}</code></b>",
         #text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.username,message.chat.last_name,message.chat.dc_id),
         parse_mode="html"
     )
