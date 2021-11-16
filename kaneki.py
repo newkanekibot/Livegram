@@ -27,7 +27,7 @@ IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
 IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 
 @bot.on_message(filters.command('start') & filters.private)
-async def start(bot, message: Message):
+async def start(bot, msg : message):
     await message.reply_text(
         text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id)+C.START,
         reply_markup=InlineKeyboardMarkup([
