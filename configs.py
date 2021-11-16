@@ -12,3 +12,6 @@ class Config(object):
     
     START = str(os.environ.get("START_TEXT", ""))
 
+    UPDATE_CHANNEL = str(os.environ.get("UPDATE_CHANNEL", ""))
+
+    SUPPORT_GROUP = str(os.environ.get("SUPPORT_GROUP", ""))
