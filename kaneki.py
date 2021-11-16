@@ -36,7 +36,7 @@ async def start(bot, msg : message):
     await message.reply_text(
         text="**Hi {}!**\n".format(message.chat.first_name)+C.START,
         reply_markup=InlineKeyboardMarkup([
-            [ InlineKeyboardButton(text=f"<b> href='tg://user?id={OWNER_ID}"]
+            [ InlineKeyboardButton(text="GROUP", <a href='https://t.me/ToxicZoneGc'>ᴅɪsɪɴɪ</a>)]
         ])
     )
 
