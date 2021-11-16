@@ -20,7 +20,7 @@ bot = Client('Feedback bot',
 
 owner_id=C.OWNER_ID
 
-LOG_TEXT = "╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'></a>\n╟᪣ Username : https://t.me/{message.chat.username}<>╟᪣ DC ID: <code>{}</code>"
+#LOG_TEXT = "╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'></a>\n╟᪣ Username : https://t.me/{message.chat.username}<>╟᪣ DC ID: <code>{}</code>"
 
 IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
 
@@ -30,13 +30,14 @@ IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 async def start(bot, msg : message):
     await bot.send_message(
         chat_id=owner_id,
-        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.username,message.chat.last_name,message.chat.dc_id),
+        text = f"<b>╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'></a>\n╟᪣ Username : https://t.me/{message.chat.username}<>╟᪣ DC ID: <code>{}</code></b>",
+        #text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.username,message.chat.last_name,message.chat.dc_id),
         parse_mode="html"
     )
     await message.reply_text(
         text="**Hi {}!**\n".format(message.chat.first_name)+C.START,
         reply_markup=InlineKeyboardMarkup([
-            [ InlineKeyboardButton(text="GROUP", <a href='https://t.me/ToxicZoneGc'>ᴅɪsɪɴɪ</a>)]
+            [ InlineKeyboardButton(text="GROUP : <a href='https://t.me/ToxicZoneGc'>ᴅɪsɪɴɪ</a>")]
         ])
     )
 
