@@ -27,6 +27,14 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
+    "SUPPORT_GROUP": {
+      "description": "Your Group Link",
+      "value": "https://t.me/ToxicZoneGc"
+    },
+    "UPDATE_CHANNEL": {
+      "description": "Your Channel Link",
+      "value": "https://t.me/ToxicZoneCh"
+    },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
