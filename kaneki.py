@@ -18,8 +18,6 @@ bot = Client('Feedback bot',
              api_hash=C.API_HASH,
              bot_token=C.BOT_TOKEN)
 
-donate_link=C.DONATE_LINK
-
 owner_id=C.OWNER_ID
 
 LOG_TEXT = "╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'></a>\n╟᪣ Username : https://t.me/{message.chat.username}<>╟᪣ DC ID: <code>{}</code>"
