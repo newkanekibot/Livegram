@@ -21,7 +21,6 @@ bot = Client('Feedback bot',
 owner_id=C.OWNER_ID
 
 LOG_TEXT = "╟᪣ ID: <code>{}</code>\n╟᪣ First Name: <a href='tg://user?id={}'>{}</a>\n╟᪣ DC ID: <code>{}</code>"
-#LOG_TEXT = "╟᪣ ID Kamu : <code>{}</code>\n╟᪣ Nama : <a href='tg://user?id={}'>{}{}</a>\n╟᪣ Username : href=https://t.me/{message.chat.username}>{}{}</a>╟᪣ DC ID: <code>{}</code>"
 
 IF_TEXT = "<b>Message from:</b> {}\n<b>Name:</b> {}"
 
@@ -35,9 +34,9 @@ async def start(bot, message):
         parse_mode="html"
     )
     await message.reply_text(
-        text="**Hallo {}!**\n".format(message.chat.first_name)+C.START,
+        text="**Hi {}!**\n".format(message.chat.first_name)+C.START,
         reply_markup=InlineKeyboardMarkup([
-            [ InlineKeyboardButton(text="GROUP : <a href='https://t.me/ToxicZoneGc'>ᴅɪsɪɴɪ</a>")]
+            [ InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{C.SUPPORT_GROUP}"), InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"{C.UPDATE_CHANNEL}")]
         ])
     )
     
