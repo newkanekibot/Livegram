@@ -30,7 +30,7 @@ IF_CONTENT = "<b>Message from:</b> {} \n<b>Name:</b> {}"
 async def start(bot, message):
     await bot.send_message(
         chat_id=owner_id,
-        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.username,message.chat.dc_id),
+        text=LOG_TEXT.format(message.chat.id,message.chat.id,message.chat.first_name,message.chat.last_name,message.chat.dc_id),
         parse_mode="html"
     )
     await message.reply_text(
