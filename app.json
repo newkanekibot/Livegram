@@ -11,6 +11,10 @@
   "website": "https://github.com/newkanekibot/livebot",
   "repository": "https://github.com/newkanekibot/livebot",
   "env": {
+    "START_TEXT": {
+      "description": "Your Start message as a string & Default is 'Hello <username>'.",
+      "value": "Silahkan Donasi pap/vidio"
+    },
     "OWNER_ID": {
       "description": "Your ID Or Who need is going to handle this bot",
       "value": ""
