@@ -15,3 +15,8 @@ cp configs.py
 (Edit variables in config.py)
 python kaneki.py
 ```
+Deploy your bot on `Okteto` [Useless]
+  
+Tutorial for okteto - [click here](https://telegra.ph/Okteto-Deploy-04-01)
+
+[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com)
