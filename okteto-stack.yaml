@@ -1,0 +1,16 @@
+services:
+  drone-srcb:
+    build: .
+    environment:
+      API_ID: $API_ID  
+      API_HASH: $API_HASH  
+      BOT_TOKEN: $BOT_TOKEN 
+      OWNER_ID: $OWNER_ID
+      SUPPORT_GROUP: $SUPPORT_GROUP
+      UPDATE_CHANNEL: $UPDATE_CHANNEL
+      START_TEXT : $START_TEXT
+    ports:
+      - 8080
+    resources:
+      cpu: 1000m
+      memory: 3Gi
